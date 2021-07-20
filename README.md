@@ -31,12 +31,6 @@ Untitled Suite's original intention is to provide project managers and their tea
 
 ## Functionality / Features
 
-## Purpose
-
-Untitled Suite's original intention is to provide project managers and their teams a one stop shop for optimising task management. Moreover whether for the development of a major multi-billion dollar project or a do it yourself project around the house, Untitled Suite aims to remind the user of the important things in life. Through its smooth interface and user-friendly experience, the application is one for the modern day agenda. From task management, daily chores around the house, to tracking and planning your own health or personal growth, Untitled Suite offers efficient and effective tools to optimise your work, your lifestyle, you.
-
-## Functionality / Features
-
 ### User Account/Profile
 
 Untitled Suite allows a user to create a unique account. Accessing this account upon login will allow users the abilities to the following:
@@ -183,9 +177,9 @@ Through the intergration of an inbuilt messaging system and robust notification 
 - Manage and resolve any user complaints
 - Review and report any technical issues or bugs
 
-## Single Sign-On (SSO) productive
+### Single Sign-On (SSO) productive
 
-The future of Untitled Suite will see users have the ability to create and log into their accounts using SSO, allowing for more connectivity between the application and their emails, google account and social medias. This will allow for a more fluent and productive experience on a professional and personal level. 
+The future of Untitled Suite will see users have the ability to create and log into their accounts using SSO, allowing for more connectivity between the application and their emails, google account and social medias. This will allow for a more fluent and productive experience on a professional and personal level.
 
 ### Profile Customisation
 
