@@ -3,7 +3,6 @@
 Built by:
 
 - Nathan Blaga [GitHub](https://github.com/NJBLAGA)
-- Gleb Tsoy [GitHub](https://github.com/Gleebo)
 - Raymond Doan [GitHub](https://github.com/raymonddoan)
 
 ## Background/Problem
@@ -32,7 +31,68 @@ Untitled Suite's original intention is to provide project managers and their tea
 
 ## Functionality / Features
 
-### Core Features
+## Purpose
+
+Untitled Suite's original intention is to provide project managers and their teams a one stop shop for optimising task management. Moreover whether for the development of a major multi-billion dollar project or a do it yourself project around the house, Untitled Suite aims to remind the user of the important things in life. Through its smooth interface and user-friendly experience, the application is one for the modern day agenda. From task management, daily chores around the house, to tracking and planning your own health or personal growth, Untitled Suite offers efficient and effective tools to optimise your work, your lifestyle, you.
+
+## Functionality / Features
+
+### User Account/Profile
+
+Untitled Suite allows a user to create a unique account. Accessing this account upon login will allow users the abilities to the following:
+
+- Modify their profile settings and account details
+- View, update and delete any of their saved lists within Tasker
+- View, update and delete any tasks within a certain list
+- View, update and delete the current state of their calender
+- View, update and delete upcoming events stored within the calender
+- Review a backlog of calender events that have past
+
+This feature allows users to customise their Tasker, calender and overall user experience to better suit their taste and style. This results in a more fluent and comfortable atmosphere in which users can feel more attached and give a personal touch to their workflow.
+
+### Admin Dashboard/System
+
+The admin system allows a user who has administrative privileges to log into Untitled Suite and perform routine tasks such as:
+
+- Delete the account of any user who is in violation of Untitled Suite's terms and conditions
+- Delete the account of any user who breaches the Untitled Suite's payment policy
+- Review and allow administrative privileges to any user who fulfills the required screening procedures
+
+All of the above tasks can be accessed from the Admin Dashboard, which acts as the central hub for all admin. This feature will not be able to be viewed or accessed by any user who is not classified as an admin.
+
+### Paypal Intergration
+
+Upon signing up, Untitled Suite offers users a trial tier of the application. This allows the user to the following benefits:
+
+**Trial Tier:**
+
+- Users can create up to 5 unique lists within the Tasker at any given point
+- Users will have the ability to create and store unlimited tasks inside these entires
+- Users will have access to their calender
+
+At any point users can purchase the premium tier for AUD $5 per month, this allows users to:
+
+**Premium Tier:**
+
+- Users can create unlimited lists within Tasker at any given point.
+- Users will have the ability to create and store unlimited tasks inside these entires
+- Users will have access to their calender
+
+### Responsive Navbar
+
+Untitled Suite offer its users a responsive and stylish navbar that allows for a smooth experience while navigating between the various components. Built with a mobile first development mindset, the navbar and overall design of the application is handled gracefully across all platforms and devices.
+
+### Responsive Design/ Mobile First Design
+
+Utilising Material-UI Untitled Suite is built with the sole intention to approach any task, easier and clearer then ever before. The design of the application was built for the mobile user on the go, the office desktop and of course for the home tablet. It offers its users a sleek an polished professional look and feel, while offering that personal touch to make the users experience that little bit more enjoyable and smooth. Untitled Suite utilises space and functionality of all its components which delivers a users tasks and events in a presentable and elegant manner.
+
+### Tasker
+
+Tasker allows users to create, update and delete any list or task created by their account. Whether on the trial or premium tier, Untitled Suite allows users to create lists within Tasker alongside setting tasks to each list. While creating a task, users can set a description, priority and reminder date. User will also be able to choose which list within Tasker, the task will be allocated to.
+
+### Integrated Calendar System
+
+The calender allows users to create, update or delete events they hve created. Additionally users can link Tasker lists and there tasks to certain events within the calender. Through its user-friendly interface, users can navigate with ease through past and future events they have set within the calender.
 
 ## Target Audience
 
@@ -40,7 +100,7 @@ Untitled Suite's original intention is to provide project managers and their tea
 
 ## Dataflow Diagram
 
-## Application Architecture Diagram
+## Application Architecture Diagram -> thursday
 
 ## User Stories
 
@@ -111,6 +171,40 @@ The Admin dashboard allows the Admin to also promote users to Admin status. This
 [https://trello.com/b/Bj5asYWU/untitled-suite]
 
 ![trello-01](./docs/trello-01.png)
+
+## Additional Features for Roadmap - Whats next?
+
+Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
+
+### Admin Dashboard Updates
+
+Through the intergration of an inbuilt messaging system and robust notification system, the admin dashboard will house the tools that will allow admin to handle the following tasks:
+
+- Manage and resolve any user complaints
+- Review and report any technical issues or bugs
+
+## Single Sign-On (SSO) productive
+
+The future of Untitled Suite will see users have the ability to create and log into their accounts using SSO, allowing for more connectivity between the application and their emails, google account and social medias. This will allow for a more fluent and productive experience on a professional and personal level. 
+
+### Profile Customisation
+
+When a user logs into their account, they can access the profile customisation feature that allows them to perform the following actions:
+
+- Update and change their profile avatar image
+- Change the colour scheme and background design of their profile within Untitled Suite
+
+### Friends List
+
+Users are able to add other users and create a friends list. From the friends list, a user an then invite their friends to join them for events set within the calendar.
+
+### Create Teams
+
+Users can take friends from their friends list and create teams. Teams will be able to share lists within Tasker, allowing them to create, edit and delete tasks alongside constructing team events within the calender.
+
+### Note-Taking Feature
+
+Untitled Suite will add a new addition to its suite of tools in the form of a fully functionally notepad. This will allow users to create, edit and delete documentation on the fly. Additionally users can utilise a copy and paste functionality between tasker and the notepad for easier and more productive sessions. The notepad will also be linked to the calender allowing users to save and attach meeting minutes and ideas from the notepad with any given event.
 
 ## License
 
