@@ -6,9 +6,29 @@ Built by:
 - Gleb Tsoy [GitHub](https://github.com/Gleebo)
 - Raymond Doan [GitHub](https://github.com/raymonddoan)
 
+## Background/Problem
+
+Whether on a professional level or for personal projects, task management is an effective and efficient tool for project management. "Task management is the term used to describe how project managers identify, monitor, and track the progress of work that needs to be completed on any given day" (Santos 2021). Task management is critical for the effective development and handling of any project, big or small.
+
+Moreover with the current global pandemic of Covid-19, millions of people have been working from home remotely, adding more strain to the day to day dealings and processes of most projects. More than ever, project teams and individuals working from afar, highlights the importance of task management and handling project development in a agile and organised manner.
+
+## Importance
+
+Task management allows teams and individuals to approach a project with a proactive mindset rather than that of a reactive mindset. Creating roadmaps, procedures, and time frames are essential components of project management. They allow for more efficient and effective development, testing, reviewing/ and implementation than reacting to events that are within and beyond the scope of the team. "Managing tasks ensures that teams are able to prioritize their workloads and guard against time-wasting. It is absolutely imperative in the social media age" (Santos 2021).
+
+Task management through an application such as Untitled Suite when handled in a efficient and effective manner can produce many benefits to a project's team. These benefits include but are not limited to:
+
+- Defining the least to most important priorities through a projects lifecycle
+- Creates snapshots of the current project and allows a high-level view of the project all at once
+- Reveals time constraints and the available time frame for each task
+- Aids in optimisation of grouping or sorting tasks in order of prioritisation which in turn aids in a more efficient scheduling system
+- Allows management and team members to work efficiently, effectively and at their maximised productivity levels within their own workloads and time frames
+- An automated process which is flexible, tailored to each project and team
+- Easy learning curve and utilisation allows for easy flow of mindsets and working habits
+
 ## Purpose
 
-Notes:
+Untitled Suite's original intention is to provide project managers and their teams a one stop shop for optimising task management. Moreover whether for the development of a major multi-billion dollar project or a do it yourself project around the house, Untitled Suite aims to remind the user of the important things in life. Through its smooth interface and user-friendly experience, the application is one for the modern day agenda. From task management, daily chores around the house, to tracking and planning your own health or personal growth, Untitled Suite offers efficient and effective tools to optimise your work, your lifestyle, you.
 
 ## Functionality / Features
 
@@ -94,5 +114,6 @@ The Admin dashboard allows the Admin to also promote users to Admin status. This
 
 ## License
 
-I just wanted to touch base and say that yesterdays pairing challenege interview was an amazing experience.
-Wanted to say it was a pleasure and I enjoyed the imiddimate feedback
+## References
+
+Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
