@@ -8,7 +8,11 @@ Built by:
 
 ## Purpose
 
+Notes:
+
 ## Functionality / Features
+
+### Core Features
 
 ## Target Audience
 
@@ -89,3 +93,6 @@ The Admin dashboard allows the Admin to also promote users to Admin status. This
 ![trello-01](./docs/trello-01.png)
 
 ## License
+
+I just wanted to touch base and say that yesterdays pairing challenege interview was an amazing experience.
+Wanted to say it was a pleasure and I enjoyed the imiddimate feedback
