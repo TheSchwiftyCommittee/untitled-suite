@@ -28,7 +28,7 @@ Task management through an application such as Untitled Suite when handled in a 
 
 ## Purpose
 
-Untitled Suite's original intention is to provide project managers and their teams a one stop shop for optimising task management. Moreover whether for the development of a major multi-billion dollar project or a do it yourself project around the house. Untitled Suite aims to remind the user of the important things in life. Through its smooth interface and user-friendly experience, the application is one for the modern day agenda. From task management, daily chores around the house, to tracking and planning your own health or personal growth, Untitled Suite offers efficient and effective tools to optimise your work, your lifestyle, you.
+Untitled Suite's original intention is to provide project managers and their teams a one stop shop for optimising task management. Moreover whether for the development of a major multi-billion dollar project or a do it yourself project around the house, Untitled Suite aims to remind the user of the important things in life. Through its smooth interface and user-friendly experience, the application is one for the modern day agenda. From task management, daily chores around the house, to tracking and planning your own health or personal growth, Untitled Suite offers efficient and effective tools to optimise your work, your lifestyle, you.
 
 ## Functionality / Features
 
