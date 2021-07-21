@@ -90,6 +90,24 @@ The calender allows users to create, update or delete events they hve created. A
 
 ## Target Audience
 
+Untitled Suite's primary goal is to offer its users a efficient and effective way to handle and succeed at task management. Whether working on a home project, personal growth, charity work or on a professional level, Untitled Suite offers a solution for any user. Its elegant and smooth design allow for any user to create an account, sign in and start using Tasker to create lists, track tasks and set events. However the target audience for Untitled Suite's initial lunch will focus on several key groups that will benefit greatly from using the application.
+
+**Business Professionals:**
+
+Focusing on task management teams, both team leaders and the members themselves can benefit from the implementation of Untitled Suite within their task management procedures, project management and agile development mindset. With stable and efficient features, Untitled Suite can aid professionals in the optimisation of defining, planning and completing tasks in a proficient and effective manner.
+
+**Education Sector:**
+
+Untitled Suite offers the educational system a tool in which teachers and teachers assistants can better plan the upcoming semester or even year. From weekly, monthly and yearly scheduling, any school system can implement Untitled Suite and benefit from its user-friendly design and smooth functionality. Tasker can benefit the classroom by allowing teachers to formulate well structured plans for the semester and by utilising the calender feature can create a more efficient flow of work by setting reminders and events.
+
+**Small Business Owners:**
+
+Australian based small Businesses and on a global scale have suffered great losses throughout the Covid-19 pandemic. Whether through government aid or self-determination, many of these business are beginning to rebuild, restructure and reopen. This requires great communication, planning and task management between the owners and their workforce. Untitled Suite can dramatically aid in the rebuilding and reopening process by removing some of the hassles of manually handling the task management process. Utilising Tasker, a business owner can define and set the necessary tasks needed to fulfill their projects and target goals. In turn those tasks can be transferred to the calender feature offering employees a top-down perspective on clear time frames, reminders, events and priorities in which tasks need to be completed, reviewed and implemented.
+
+**Home Use:**
+
+The Australian public during the Covid-19 pandemic were asked to work, school and live from home for weeks and months on end. During this period many Australians discovered and commenced home projects, hobbies and self growth journeys. Even to this day after and between lock-downs, Australians continue to do so. Untitled Suite can benefit Australians with defining, setting and tracking the individual tasks needed within these projects. Providing a user-friendly interface alongside the applications portability between any device allows any user to track their new garden project, their weight loss journey or even feeding schedules for newborn babies. Untitled Suite aims to not only solve task management on a professional level but its here to remind you at home about the important things in life.
+
 ## Tech Stack
 
 ## Dataflow Diagram
