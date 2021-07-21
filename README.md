@@ -182,7 +182,7 @@ The initial wireframes designed for Untitled Suite aim to maintain a basic struc
 
 ### Colour Scheme
 
-Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application. 
+Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application. For more details, [here](https://www.happyhues.co/palettes/9) is the combination of the colour scheme.
 
 ### Home Page
 
