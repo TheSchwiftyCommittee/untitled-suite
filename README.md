@@ -222,4 +222,4 @@ Untitled Suite will add a new addition to its suite of tools in the form of a fu
 
 ## References
 
-Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
+- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
