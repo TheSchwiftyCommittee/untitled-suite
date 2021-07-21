@@ -110,6 +110,54 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## Tech Stack
 
+### Application
+
+- React and JavaScript for Front-end
+- Ruby on Rails for Back-end Server
+- PostgreSQL for DBMS (Database Management System)
+
+### Testing
+
+**Front End Unit:**
+
+- Jest used for main JavaScript testing framework throughout project
+- Testing-library/react used for testing React components
+
+**Back End Unit Testing:**
+
+- RSPEC used for behavior-driven development of the back-end
+
+**Integration/E2E Testing:**
+
+- Cypress used for end-to-end, integration and unit testing
+
+### Gems
+
+- Devise used for adding authentication
+- Bcrypt used to create password digests and authentication logic
+- Puma used as local testing server
+- RSPEC-Rails used for behavior-driven development of the back-end
+
+### Libraries/3rd Party API
+
+- Google Calendar API for calendar feature
+- Material UI for CSS framework
+- Axios used for fetching data from the backend
+- React-router-dom used to create a multi-page application
+- AWS used as the cloud web hosting solution for project
+- PayPal Developer used to integrate PayPal into the platform
+
+### Deployment
+
+- Netlify for frontEnd deployment
+- Heroku for backend database/API deployment
+
+### DevOps
+
+- GitHub used for code hosting platform for version control and collaboration
+- Trello used as team's collaboration tool and task management
+- Discord use as main form of communications between team members
+
 ## Dataflow Diagram
 
 ## Application Architecture Diagram -> thursday
@@ -222,4 +270,4 @@ Untitled Suite will add a new addition to its suite of tools in the form of a fu
 
 ## References
 
-- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
+Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
