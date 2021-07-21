@@ -54,7 +54,7 @@ The admin system allows a user who has administrative privileges to log into Unt
 
 All of the above tasks can be accessed from the Admin Dashboard, which acts as the central hub for all admin. This feature will not be able to be viewed or accessed by any user who is not classified as an admin.
 
-### Paypal Intergration
+### Paypal Integration
 
 Upon signing up, Untitled Suite offers users a trial tier of the application. This allows the user to the following benefits:
 
@@ -76,7 +76,7 @@ At any point users can purchase the premium tier for AUD $5 per month, this allo
 
 Untitled Suite offer its users a responsive and stylish navbar that allows for a smooth experience while navigating between the various components. Built with a mobile first development mindset, the navbar and overall design of the application is handled gracefully across all platforms and devices.
 
-### Responsive Design/ Mobile First Design
+### Responsive Design / Mobile First Design
 
 Utilising Material-UI Untitled Suite is built with the sole intention to approach any task, easier and clearer then ever before. The design of the application was built for the mobile user on the go, the office desktop and of course for the home tablet. It offers its users a sleek an polished professional look and feel, while offering that personal touch to make the users experience that little bit more enjoyable and smooth. Untitled Suite utilises space and functionality of all its components which delivers a users tasks and events in a presentable and elegant manner.
 
@@ -92,19 +92,19 @@ The calender allows users to create, update or delete events they hve created. A
 
 Untitled Suite's primary goal is to offer its users a efficient and effective way to handle and succeed at task management. Whether working on a home project, personal growth, charity work or on a professional level, Untitled Suite offers a solution for any user. Its elegant and smooth design allow for any user to create an account, sign in and start using Tasker to create lists, track tasks and set events. However the target audience for Untitled Suite's initial lunch will focus on several key groups that will benefit greatly from using the application.
 
-**Business Professionals:**
+### Business Professionals
 
 Focusing on task management teams, both team leaders and the members themselves can benefit from the implementation of Untitled Suite within their task management procedures, project management and agile development mindset. With stable and efficient features, Untitled Suite can aid professionals in the optimisation of defining, planning and completing tasks in a proficient and effective manner.
 
-**Education Sector:**
+### Education Sector
 
 Untitled Suite offers the educational system a tool in which teachers and teachers assistants can better plan the upcoming semester or even year. From weekly, monthly and yearly scheduling, any school system can implement Untitled Suite and benefit from its user-friendly design and smooth functionality. Tasker can benefit the classroom by allowing teachers to formulate well structured plans for the semester and by utilising the calender feature can create a more efficient flow of work by setting reminders and events.
 
-**Small Business Owners:**
+### Small Business Owners
 
 Australian based small Businesses and on a global scale have suffered great losses throughout the Covid-19 pandemic. Whether through government aid or self-determination, many of these business are beginning to rebuild, restructure and reopen. This requires great communication, planning and task management between the owners and their workforce. Untitled Suite can dramatically aid in the rebuilding and reopening process by removing some of the hassles of manually handling the task management process. Utilising Tasker, a business owner can define and set the necessary tasks needed to fulfill their projects and target goals. In turn those tasks can be transferred to the calender feature offering employees a top-down perspective on clear time frames, reminders, events and priorities in which tasks need to be completed, reviewed and implemented.
 
-**Home Use:**
+### Home Use
 
 The Australian public during the Covid-19 pandemic were asked to work, school and live from home for weeks and months on end. During this period many Australians discovered and commenced home projects, hobbies and self growth journeys. Even to this day after and between lock-downs, Australians continue to do so. Untitled Suite can benefit Australians with defining, setting and tracking the individual tasks needed within these projects. Providing a user-friendly interface alongside the applications portability between any device allows any user to track their new garden project, their weight loss journey or even feeding schedules for newborn babies. Untitled Suite aims to not only solve task management on a professional level but its here to remind you at home about the important things in life.
 
@@ -116,7 +116,7 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## User Stories
 
-- As a user, I want to be able to create an account/ profile.
+- As a user, I want to be able to create an account/profile.
 
 **Solution:**
 
@@ -178,11 +178,85 @@ The Admin dashboard allows the Admin to also promote users to Admin status. This
 
 ## Wireframes
 
+The initial wireframes designed for Untitled Suite aim to maintain a basic structure and layout during the development and production cycles. After discussions with the stakeholders, some elements were modified and/or removed to cater for the MVP the clients sought out. Below is a breakdown of all wireframes and any changes that occurred during the design process. It should be noted that, in these initial designs, Untitled Suite maintained a mobile first design and will look to the future to continuously improve its design.
+
+### Colour Scheme
+
+Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application. 
+
+### Home Page
+
+The home page is designed to give a brief introduction to the application and give Call-To-Actions (CTAs) for the user to sign up or login. The minimalism to the home page aims to help the user understand the simplicity of the application. 
+
+![wireframe_home](./docs/wireframes-2/wireframe_home.png)
+
+### Tasker Dashboard
+
+Once logged in, the user is brought to Tasker as their default page. Here, the user will be able to view all their tasks, with the first being the tasks associated with today. It is a simple UI with the CTA buttons in orange and the Lists listed at the bottom of the page. Pagination was an initial idea discussed to achieve the list of the tasks, however was overruled with a scrolling capability to maintain the single page application (SPA) aspect. 
+
+The layout of the application with the agenda to the side of the tasks was requested as it helped with the usability of the web app and helps manage the reminders of the tasks along with the meetings throughout the day. This component will be hidden on the smaller screen sizes to give more space to the core feature of the page.
+
+Users can create new tasks and lists on this page by clicking the `Add New Task / List` button. An untitled task / list will be shown above the button where the user will be prompted to type in the title of the task / list.
+
+![wireframe_tasker_read](./docs/wireframes-2/wireframe_tasker_read.png)
+
+### Tasker - Edit / Delete Task Page
+
+In the event of the user requiring to modify the task to be more specific, users can select the dot on the right side of the task and modify details of the task. Here, users are able to change the task details such as title, description, reminder date and many more. 
+
+A calendar prompt will be shown once the `Reminder Date` is selected, and setting the date will set the reminder to notify the user of the task on the day. `Select List` will allow the user to associate the task with the list they have created prior to the task, which can be found at the bottom of the Tasker dashboard. `Select Priority` will allow the user to set the level of priority for the task.
+
+![wireframe_tasker_CUD](./docs/wireframes-2/wireframe_tasker_CUD.png)
+
+### Calendar Dashboard
+
+Below is the default view of the Calendar dashboard, with Tasker on the left of the calendar and the weekly view as default for the user. Similar to the agenda feature in the Tasker dashboard, the Calendar dashboard hides the Tasker list in smaller screen sizes and gives more space and functionality to the Calendar. In these smaller screens, users will be able to create events with the `+` button on the bottom right of the screen. 
+
+![wireframe_calendar_read](./docs/wireframes-2/wireframe_calendar_read.png)
+
+### Calendar - Add New Event / Edit Event Page 
+
+Here, a modal component or pop up will show onto the screen when the user decides to add a new event or modify an existing event. Start and End dates are provided for the user to create the length of their meetings as well as description box for more in-depth details to the meeting.
+
+![wireframe_calendar_CUD](./docs/wireframes-2/wireframe_calendar_CUD.png)
+
+### Admin Page
+
+For the administrators of the application, they will have special provisions to the application such as adding and removing users. `Update Selected` and `Delete Selected` are capabilities for the adminstrator to conduct actions in bulk or for various users.
+
+![wireframe_admin_RUD](./docs/wireframes-2/wireframe_admin_RUD.png)
+
+### Profile Page
+
+Profile page will allow users to update their details on the application, such as their email and passwords. The username will be the source of truth and grant them access to Untitled Suite.
+
+![wireframe_profile_RUD](./docs/wireframes-2/wireframe_profile_RUD.png)
+
+### Login Page
+
+Here is a simple login page for the users to login into the application. 
+
+![wireframe_login](./docs/wireframes-2/wireframe_login.png)
+
+### Sign Up Page
+
+Similar to the login page, here is a simple sign up page where the user will be able to enter in their desired username, email and password to login into the application.
+
+![wireframe_signup](./docs/wireframes-2/wireframe_signup.png)
+
+### Pricing Page 
+
+Finally, here is the pricing page will be linked to a Paypal page where the user can pay for a subscription fee to upgrade their account and have access to the premium tier of the website.
+
+In mobile view, the users will be able to scroll left to right to view the Premium option.
+
+![wireframe_pricing](./docs/wireframes-2/wireframe_pricing.png)
+
 ## Trello Board
 
-[https://trello.com/b/Bj5asYWU/untitled-suite]
+For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access). 
 
-![trello-01](./docs/trello-01.png)
+![Update to date progression of the Trello Board](./docs/trello-board/trello-04.png)
 
 ## Additional Features for Roadmap - Whats next?
 
