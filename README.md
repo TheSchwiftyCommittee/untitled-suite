@@ -110,55 +110,76 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## Tech Stack
 
-### Application
-
-- React and JavaScript for Front-end
-- Ruby on Rails for Back-end Server
-- PostgreSQL for DBMS (Database Management System)
-
-### Testing
-
-**Front End Unit:**
-
-- Jest used for main JavaScript testing framework throughout project
-- Testing-library/react used for testing React components
-
-**Back End Unit Testing:**
-
-- RSPEC used for behavior-driven development of the back-end
-
-**Integration/E2E Testing:**
-
-- Cypress used for end-to-end, integration and unit testing
-
-### Gems
-
-- Devise used for adding authentication
-- Bcrypt used to create password digests and authentication logic
-- Puma used as local testing server
-- RSPEC-Rails used for behavior-driven development of the back-end
-
-### Libraries/3rd Party API
-
-- Google Calendar API for calendar feature
-- Material UI for CSS framework
-- Axios used for fetching data from the backend
-- React-router-dom used to create a multi-page application
-- AWS used as the cloud web hosting solution for project
-- PayPal Developer used to integrate PayPal into the platform
-
-### Deployment
-
-- Netlify for frontEnd deployment
-- Heroku for backend database/API deployment
-
-### DevOps
-
-- GitHub used for code hosting platform for version control and collaboration
-- Trello used as team's collaboration tool and task management
-- Discord use as main form of communications between team members
-
 ## Dataflow Diagram
+
+Untitled Suite can be broken up into three main processes or functions, Users, Tasker and Calendar. Both the Users and Tasker functions contain sub-processes within, which have been shown in the further breakdown. The legend in the top left corner represents what each of the symbols represent:
+
+- External entitys reflect entities outside of the application and are represented in yellow curved rectangles.
+- Processes and subprocesses reflect how the data and its flow are manipulated and are represented in blue curved rectangles with a header. These headers reflect the collection of the processes respective to function.
+- Data stores or databases reflect where the data is stored and are represented in green curved rectangles with a row header.
+- Data flows reflect what data is moved and its path across various processes and data stores. These are represented in arrowed lines with the arrow head indicating the end destination.
+
+At 'Start Here', for `Guests` to access the Untitled Suite, they are required to provide their details to either create an account (`1.0`) or log into their account (`2.0`). This will be checked against the `Users` database before authorising the guest as an administrator (`Admin`) or `User`. 
+
+![Level-0-Diagram](./docs/dataflow-diagram/Level-0-Diagram.png)
+
+### Users Dataflow
+
+Once logged in, here is where the `User` will interact with their account settings. Within the account settings, `Users` can view and manipulate the data including (see next sections for more details):
+
+- Email and password through `Profile` database
+- Subscription plan through `PricingPlan ` database
+
+For `Admins`, they will be able to perform RUD requests to the `Users` database by passing in the updated user details. `Admin` provisions will be set in the `Users` database. `Users` cannot be created through the `Admin` role as only `Users` will be the creator of their own accounts for security purposes.
+
+![dfd-users](./docs/dataflow-diagram/dfd-users.png)
+
+#### Profile Dataflow
+
+`Users` will be able to view and update their profiles through the `Profile` database. Parameters such as `userId` will be passed to check and show the `User's` profile.
+
+![dfd-users-profile](./docs/dataflow-diagram/dfd-users-profile.png)
+
+#### Pricing Plan Dataflow
+
+Similar to the `Profile` dataflow, `Users` will be able to view and update their subscription plans through the `PricingPlan` database, where `Users` who have paid for the premium service will be shown. 
+
+![dfd-users-pricing](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-users-pricing.png)
+
+### Tasker Dataflow
+
+As one of the core features of the application, two databases are required for the Tasker component to function, `Lists` and `Tasks` databases. The `userId` parameter is passed into the databases to collect their relevant information.
+
+![dfd-tasker](./docs/dataflow-diagram/dfd-tasker.png)
+
+#### Lists Dataflow
+
+Full CRUD functionality is available for the `User` to generate unique lists for tasks to be tagged into. 
+
+![dfd-tasker-list](./docs/dataflow-diagram/dfd-tasker-list.png)
+
+#### Tasks Dataflow
+
+Similar to Lists, dataflow in the Tasks component will be managed through the `Tasks` database. All CRUD functionality will be passed through the `Tasks` database.
+
+![dfd-tasker](./docs/dataflow-diagram/dfd-tasker-task.png)
+
+### Calendar Dataflow
+
+Similar to Lists and Tasks, all calendar events set by the `Users` are shown and can be accessed through the `Calendar` database, where `userId` will be cross-referenced against the `userId` field in the database.
+
+![dfd-calendar](./docs/dataflow-diagram/dfd-calendar.png)
+
+### Joining Tables Dataflow
+
+Two major components to integrate Tasker and Calendar are joining tables as shown below. These will be set up within the Rails API such that:
+
+- Lists will be a one-to-many relationship with Tasks, and;
+- Calendars also have a one-to-many relationship with Tasks.
+
+![dfd-jointable-listtask](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-jointable-listtask.png)
+
+![dfd-jointable-taskcalendar](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-jointable-taskcalendar.png)
 
 ## Application Architecture Diagram -> thursday
 
@@ -344,4 +365,4 @@ Untitled Suite will add a new addition to its suite of tools in the form of a fu
 
 ## References
 
-Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
+- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
