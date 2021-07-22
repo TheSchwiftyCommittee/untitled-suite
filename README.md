@@ -1,4 +1,4 @@
-# untitled-suite
+# Untitled-Suite
 
 Built by:
 
@@ -543,8 +543,6 @@ Users can take friends from their friends list and create teams. Teams will be a
 ### Note-Taking Feature
 
 Untitled Suite will add a new addition to its suite of tools in the form of a fully functional `Notepad`. This will allow users to create, edit and delete documentation on the fly. Additionally, users can utilise a copy and paste functionality between `Tasker` and the `Notepad` for easier and more productive sessions. The notepad will also be linked to the `Calendar` allowing users to save and attach meeting minutes and ideas from the notepad with any given `Event`.
-
-## License
 
 ## References
 
