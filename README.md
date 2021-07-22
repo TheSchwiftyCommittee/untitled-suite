@@ -110,6 +110,54 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## Tech Stack
 
+### Application
+
+- React and JavaScript for Front-end
+- Ruby on Rails for Back-end Server
+- PostgreSQL for DBMS (Database Management System)
+
+### Testing
+
+**Front End Unit:**
+
+- Jest used for main JavaScript testing framework throughout project
+- Testing-library/react used for testing React components
+
+**Back End Unit Testing:**
+
+- RSPEC used for behavior-driven development of the back-end
+
+**Integration/E2E Testing:**
+
+- Cypress used for end-to-end, integration and unit testing
+
+### Gems
+
+- Devise used for adding authentication
+- Bcrypt used to create password digests and authentication logic
+- Puma used as local testing server
+- RSPEC-Rails used for behavior-driven development of the back-end
+
+### Libraries/3rd Party API
+
+- Google Calendar API for calendar feature
+- Material UI for CSS framework
+- Axios used for fetching data from the backend
+- React-router-dom used to create a multi-page application
+- AWS used as the cloud web hosting solution for project
+- PayPal Developer used to integrate PayPal into the platform
+
+### Deployment
+
+- Netlify for frontEnd deployment
+- Heroku for backend database/API deployment
+
+### DevOps
+
+- GitHub used for code hosting platform for version control and collaboration
+- Trello used as team's collaboration tool and task management
+- Discord use as main form of communications between team members
+
 ## Dataflow Diagram
 
 Untitled Suite can be broken up into three main processes or functions, Users, Tasker and Calendar. Both the Users and Tasker functions contain sub-processes within, which have been shown in the further breakdown. The legend in the top left corner represents what each of the symbols represent:
@@ -119,7 +167,7 @@ Untitled Suite can be broken up into three main processes or functions, Users, T
 - Data stores or databases reflect where the data is stored and are represented in green curved rectangles with a row header.
 - Data flows reflect what data is moved and its path across various processes and data stores. These are represented in arrowed lines with the arrow head indicating the end destination.
 
-At 'Start Here', for `Guests` to access the Untitled Suite, they are required to provide their details to either create an account (`1.0`) or log into their account (`2.0`). This will be checked against the `Users` database before authorising the guest as an administrator (`Admin`) or `User`. 
+At 'Start Here', for `Guests` to access the Untitled Suite, they are required to provide their details to either create an account (`1.0`) or log into their account (`2.0`). This will be checked against the `Users` database before authorising the guest as an administrator (`Admin`) or `User`.
 
 ![Level-0-Diagram](./docs/dataflow-diagram/Level-0-Diagram.png)
 
@@ -142,9 +190,9 @@ For `Admins`, they will be able to perform RUD requests to the `Users` database 
 
 #### Pricing Plan Dataflow
 
-Similar to the `Profile` dataflow, `Users` will be able to view and update their subscription plans through the `PricingPlan` database, where `Users` who have paid for the premium service will be shown. 
+Similar to the `Profile` dataflow, `Users` will be able to view and update their subscription plans through the `PricingPlan` database, where `Users` who have paid for the premium service will be shown.
 
-![dfd-users-pricing](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-users-pricing.png)
+![dfd-users-pricing](./docs/dataflow-diagram/dfd-users-pricing.png)
 
 ### Tasker Dataflow
 
@@ -154,7 +202,7 @@ As one of the core features of the application, two databases are required for t
 
 #### Lists Dataflow
 
-Full CRUD functionality is available for the `User` to generate unique lists for tasks to be tagged into. 
+Full CRUD functionality is available for the `User` to generate unique lists for tasks to be tagged into.
 
 ![dfd-tasker-list](./docs/dataflow-diagram/dfd-tasker-list.png)
 
@@ -177,9 +225,69 @@ Two major components to integrate Tasker and Calendar are joining tables as show
 - Lists will be a one-to-many relationship with Tasks, and;
 - Calendars also have a one-to-many relationship with Tasks.
 
-![dfd-jointable-listtask](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-jointable-listtask.png)
+![dfd-jointable-listtask](./docs/dataflow-diagram/dfd-jointable-listtask.png)
 
-![dfd-jointable-taskcalendar](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-jointable-taskcalendar.png)
+![dfd-jointable-taskcalendar](./docs/dataflow-diagram/dfd-jointable-taskcalendar.png)
+
+## Application Architecture Diagram
+
+![untitled_suite_application_architecture_diagram](./docs/application-architecture-diagram/untitled-suite-AAD.png)
+
+The above Application Architecture Diagram illustrates the various components that comprise Untitled Suite's architectural framework. The diagram denotes how each component is handled on a individual level and how they function within their various interactions with other components.
+
+### Front-end
+
+`React` handles the Front-end for Untitled Suite. When a user accesses the application, they are directed to the Untitled Suite's landing page. React renders everything from the navbar system, landing page to login/sign-up forms to the users browser.
+
+### Back-end
+
+Untitled Suite's is handled by `Ruby on Rails` back-end. Utilising fully functionally `CRUD` implementation for users, allows them to create, read, update and delete the following:
+
+- Account/Profile settings
+- Lists within Tasker
+- All individual tasks within each list
+- Calender Events
+
+The back-end will also allow Admin to perform `CRUD` functionality in relation to the following aspects:
+
+- View user account
+- Upgrade user account to Admin status
+- Delete user account
+
+### Database
+
+Untitled Suite's relational database will utilise PostgreSQL to store and provide access to data points that are related to one another. Using a relational model allows Untitled Suite to form relations between the user model and the various other models within the database. An example one be that of a user and their Tasker Lists, a user can have many Tasker lists, however any given Tasker list can only belong to one user. This in turn suggests a one to many relationship.
+
+### Cloud Service
+
+Untitled Suite will utilise AWS cloud based services to host its database. This will allow Untitled Suite to store data and information such as:
+
+- User account details (username,password,image avatar, profile settings, payment details, payment history, current tier)
+- Current `lists` within `Tasker` under that users account id
+- Current `tasks` within above lists under that users account id
+- Calender `events` belonging to each User
+
+### Test Framework
+
+- Untitled Suite's front-end utilises both `Jest` and `testing-library/react` frameworks for its testing purposes. Both JavaScript logic and React components are tested to ensure Untitled Suite runs efficiently with minimal of errors, bugs and poor user experiences occurring.
+- Untitled Suite's back-end will utilise the `Rspec` gem for testing the various back-end components.
+- `Cypress` is utilised to test various components within Untitled Suite's framework, through end-to-end, integration and unit testing
+
+### 3rd Party API/Libraries
+
+- The `Axios` library is utilised to fetch data from the API end-points. Performed with an asynchronous mindset alongside error handling and testing, data will be successful retrieved and rendered to the user.
+- The React front-end entire styling and design framework for Untitled Suite will be handled by the Material-UI framework.
+- The `controller` within the `rails` back-end will be able to access the `Paypal developer API`, this will allow the `user model` to instruct the database to link `user profiles` to their payments and grant them the `premium` tier benefits.
+- The `controller` will also be able to access the `Google Calendar API` and utilise its extensive library to create the framework for the applications calendar feature
+- The `Rails` back-end will also utilise the `Devise` gem and its various modules to create a flexible authentication solution for Untitled Suite's user base. Additionally alongside the user model and restrictions within CRUD functionality, `Devise` will handle and set a range of accessibility on pages that contained particular user information
+
+### Example
+
+When a user logs into the Untitled Suite application they wish to create a new list within Tasker. React will render the new list page within the `Tasker` feature. React will then utilise `Axios` to fetch the `user-lists` endpoint from the API. Through `Devise` and back-end `controller`, the fetch will request will be quired within the database, to verify several key factors:
+
+- Does the current user id exist?
+- Does the current user id holds the `trial` or `premium` tier ?
+- If the current user is on the `trial` tier, have they exceeded their 5 list limit?
 
 ## Application Architecture Diagram
 
@@ -242,7 +350,6 @@ When a user logs into the Untitled Suite application they wish to create a new l
 - If the current user is on the `trial` tier, have they exceeded their 5 list limit?
 
 If the current user can create a new list within `Tasker`, the `PostgreSQL` will send the `Controller` a response allowing the action to take place. The back-end will then send a response back to the front-end. `React` will then handle that response and render the relevant components and information to the user. Although the above example denotes a simplistic description on how the above action is handled within Untitled Suite's architectural framework. It demonstrates how each component within the framework handles it primary duties and interactions with each other.
-
 
 ## User Stories
 
@@ -316,13 +423,13 @@ Untitled Suite encourages creativity and enthusiasm throughout the project manag
 
 ### Home Page
 
-The home page is designed to give a brief introduction to the application and give Call-To-Actions (CTAs) for the user to sign up or login. The minimalism to the home page aims to help the user understand the simplicity of the application. 
+The home page is designed to give a brief introduction to the application and give Call-To-Actions (CTAs) for the user to sign up or login. The minimalism to the home page aims to help the user understand the simplicity of the application.
 
 ![wireframe_home](./docs/wireframes-2/wireframe_home.png)
 
 ### Tasker Dashboard
 
-Once logged in, the user is brought to Tasker as their default page. Here, the user will be able to view all their tasks, with the first being the tasks associated with today. It is a simple UI with the CTA buttons in orange and the Lists listed at the bottom of the page. Pagination was an initial idea discussed to achieve the list of the tasks, however was overruled with a scrolling capability to maintain the single page application (SPA) aspect. 
+Once logged in, the user is brought to Tasker as their default page. Here, the user will be able to view all their tasks, with the first being the tasks associated with today. It is a simple UI with the CTA buttons in orange and the Lists listed at the bottom of the page. Pagination was an initial idea discussed to achieve the list of the tasks, however was overruled with a scrolling capability to maintain the single page application (SPA) aspect.
 
 The layout of the application with the agenda to the side of the tasks was requested as it helped with the usability of the web app and helps manage the reminders of the tasks along with the meetings throughout the day. This component will be hidden on the smaller screen sizes to give more space to the core feature of the page.
 
@@ -332,7 +439,7 @@ Users can create new tasks and lists on this page by clicking the `Add New Task 
 
 ### Tasker - Edit / Delete Task Page
 
-In the event of the user requiring to modify the task to be more specific, users can select the dot on the right side of the task and modify details of the task. Here, users are able to change the task details such as title, description, reminder date and many more. 
+In the event of the user requiring to modify the task to be more specific, users can select the dot on the right side of the task and modify details of the task. Here, users are able to change the task details such as title, description, reminder date and many more.
 
 A calendar prompt will be shown once the `Reminder Date` is selected, and setting the date will set the reminder to notify the user of the task on the day. `Select List` will allow the user to associate the task with the list they have created prior to the task, which can be found at the bottom of the Tasker dashboard. `Select Priority` will allow the user to set the level of priority for the task.
 
@@ -340,11 +447,11 @@ A calendar prompt will be shown once the `Reminder Date` is selected, and settin
 
 ### Calendar Dashboard
 
-Below is the default view of the Calendar dashboard, with Tasker on the left of the calendar and the weekly view as default for the user. Similar to the agenda feature in the Tasker dashboard, the Calendar dashboard hides the Tasker list in smaller screen sizes and gives more space and functionality to the Calendar. In these smaller screens, users will be able to create events with the `+` button on the bottom right of the screen. 
+Below is the default view of the Calendar dashboard, with Tasker on the left of the calendar and the weekly view as default for the user. Similar to the agenda feature in the Tasker dashboard, the Calendar dashboard hides the Tasker list in smaller screen sizes and gives more space and functionality to the Calendar. In these smaller screens, users will be able to create events with the `+` button on the bottom right of the screen.
 
 ![wireframe_calendar_read](./docs/wireframes-2/wireframe_calendar_read.png)
 
-### Calendar - Add New Event / Edit Event Page 
+### Calendar - Add New Event / Edit Event Page
 
 Here, a modal component or pop up will show onto the screen when the user decides to add a new event or modify an existing event. Start and End dates are provided for the user to create the length of their meetings as well as description box for more in-depth details to the meeting.
 
@@ -364,7 +471,7 @@ Profile page will allow users to update their details on the application, such a
 
 ### Login Page
 
-Here is a simple login page for the users to login into the application. 
+Here is a simple login page for the users to login into the application.
 
 ![wireframe_login](./docs/wireframes-2/wireframe_login.png)
 
@@ -374,7 +481,7 @@ Similar to the login page, here is a simple sign up page where the user will be 
 
 ![wireframe_signup](./docs/wireframes-2/wireframe_signup.png)
 
-### Pricing Page 
+### Pricing Page
 
 Finally, here is the pricing page will be linked to a Paypal page where the user can pay for a subscription fee to upgrade their account and have access to the premium tier of the website.
 
@@ -384,9 +491,8 @@ In mobile view, the users will be able to scroll left to right to view the Premi
 
 ## Trello Board
 
-For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access). 
+For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access).
 
-![Update to date progression of the Trello Board](./docs/trello-board/trello-04.png)
 ### Day 1 - Kickoff Meeting: 
 
 - Project research for inspiration were completed.
@@ -454,7 +560,6 @@ For snapshots of the progress of our Trello board, check out the `docs/trello-bo
 ![trello-08](./docs/trello-board/trello-08.png)
 
 ### Day 9 - Part Submission:
-
 
 
 ## Additional Features for Roadmap - Whats next?
