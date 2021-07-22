@@ -160,6 +160,75 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## Dataflow Diagram
 
+Untitled Suite can be broken up into three main processes or functions, Users, Tasker and Calendar. Both the Users and Tasker functions contain sub-processes within, which have been shown in the further breakdown. The legend in the top left corner represents what each of the symbols represent:
+
+- External entitys reflect entities outside of the application and are represented in yellow curved rectangles.
+- Processes and subprocesses reflect how the data and its flow are manipulated and are represented in blue curved rectangles with a header. These headers reflect the collection of the processes respective to function.
+- Data stores or databases reflect where the data is stored and are represented in green curved rectangles with a row header.
+- Data flows reflect what data is moved and its path across various processes and data stores. These are represented in arrowed lines with the arrow head indicating the end destination.
+
+At 'Start Here', for `Guests` to access the Untitled Suite, they are required to provide their details to either create an account (`1.0`) or log into their account (`2.0`). This will be checked against the `Users` database before authorising the guest as an administrator (`Admin`) or `User`.
+
+![Level-0-Diagram](./docs/dataflow-diagram/Level-0-Diagram.png)
+
+### Users Dataflow
+
+Once logged in, here is where the `User` will interact with their account settings. Within the account settings, `Users` can view and manipulate the data including (see next sections for more details):
+
+- Email and password through `Profile` database
+- Subscription plan through `PricingPlan ` database
+
+For `Admins`, they will be able to perform RUD requests to the `Users` database by passing in the updated user details. `Admin` provisions will be set in the `Users` database. `Users` cannot be created through the `Admin` role as only `Users` will be the creator of their own accounts for security purposes.
+
+![dfd-users](./docs/dataflow-diagram/dfd-users.png)
+
+#### Profile Dataflow
+
+`Users` will be able to view and update their profiles through the `Profile` database. Parameters such as `userId` will be passed to check and show the `User's` profile.
+
+![dfd-users-profile](./docs/dataflow-diagram/dfd-users-profile.png)
+
+#### Pricing Plan Dataflow
+
+Similar to the `Profile` dataflow, `Users` will be able to view and update their subscription plans through the `PricingPlan` database, where `Users` who have paid for the premium service will be shown.
+
+![dfd-users-pricing](./docs/dataflow-diagram/dfd-users-pricing.png)
+
+### Tasker Dataflow
+
+As one of the core features of the application, two databases are required for the Tasker component to function, `Lists` and `Tasks` databases. The `userId` parameter is passed into the databases to collect their relevant information.
+
+![dfd-tasker](./docs/dataflow-diagram/dfd-tasker.png)
+
+#### Lists Dataflow
+
+Full CRUD functionality is available for the `User` to generate unique lists for tasks to be tagged into.
+
+![dfd-tasker-list](./docs/dataflow-diagram/dfd-tasker-list.png)
+
+#### Tasks Dataflow
+
+Similar to Lists, dataflow in the Tasks component will be managed through the `Tasks` database. All CRUD functionality will be passed through the `Tasks` database.
+
+![dfd-tasker](./docs/dataflow-diagram/dfd-tasker-task.png)
+
+### Calendar Dataflow
+
+Similar to Lists and Tasks, all calendar events set by the `Users` are shown and can be accessed through the `Calendar` database, where `userId` will be cross-referenced against the `userId` field in the database.
+
+![dfd-calendar](./docs/dataflow-diagram/dfd-calendar.png)
+
+### Joining Tables Dataflow
+
+Two major components to integrate Tasker and Calendar are joining tables as shown below. These will be set up within the Rails API such that:
+
+- Lists will be a one-to-many relationship with Tasks, and;
+- Calendars also have a one-to-many relationship with Tasks.
+
+![dfd-jointable-listtask](./docs/dataflow-diagram/dfd-jointable-listtask.png)
+
+![dfd-jointable-taskcalendar](./docs/dataflow-diagram/dfd-jointable-taskcalendar.png)
+
 ## Application Architecture Diagram
 
 ![untitled_suite_application_architecture_diagram](./docs/application-architecture-diagram/untitled-suite-AAD.png)
@@ -181,9 +250,9 @@ Untitled Suite's is handled by `Ruby on Rails` back-end. Utilising fully functio
 
 The back-end will also allow Admin to perform `CRUD` functionality in relation to the following aspects:
 
-- View user profiles
-- Upgrade user profiles to Admin status
-- Delete user profiles
+- View user account
+- Upgrade user account to Admin status
+- Delete user account
 
 ### Database
 
@@ -290,7 +359,7 @@ The initial wireframes designed for Untitled Suite aim to maintain a basic struc
 
 ### Colour Scheme
 
-Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application.
+Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application. For more details, [here](https://www.happyhues.co/palettes/9) is the combination of the colour scheme.
 
 ### Home Page
 
@@ -364,7 +433,7 @@ In mobile view, the users will be able to scroll left to right to view the Premi
 
 For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access).
 
-![Update to date progression of the Trello Board](./docs/trello-board/trello-04.png)
+![Update to date progression of the Trello Board](./docs/trello-board/trello-06.png)
 
 ## Additional Features for Roadmap - Whats next?
 
@@ -404,4 +473,4 @@ Untitled Suite will add a new addition to its suite of tools in the form of a fu
 
 ## References
 
-Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
+- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
