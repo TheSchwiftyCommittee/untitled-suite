@@ -162,17 +162,43 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## Application Architecture Diagram
 
-![untitled_suite_application_architecture_diagram](./docs/application-achitecture-diagram/untitled-suite-AAD.png)
+![untitled_suite_application_architecture_diagram](./docs/application-architecture-diagram/untitled-suite-AAD.png)
 
-- What is my app made of?
+The above Application Architecture Diagram illustrates the various components that comprise Untitled Suite's architectural framework. The diagram denotes how each component is handled on a individual level and how they function within their various interactions with other components.
 
-- What separate parts of my app are there?
+### Front-end
 
-- How do these separate parts of my app connect to each other?
+`React` handles the Front-end for Untitled Suite. When a user accesses the application, they are directed to the Untitled Suite's landing page. React renders everything from the navbar system, landing page to login/sign-up forms to the users browser.
 
-You can think of it as identifying the features & parts of your application.
+### Back-end
 
-The database connects to the models, which connects to the controllers, which connects to the views...etc etc.
+Untitled Suite's is handled by `Ruby on Rails` back-end. Utilising fully functionally `CRUD` implementation for users, allows them to create, read, update and delete the following:
+
+- Account/Profile settings
+- Lists within Tasker
+- All individual tasks within each list
+- Calender
+
+The back-end will also allow Admin to perform `CRUD` functionality in relation to the following aspects:
+
+- View user profiles
+- Upgrade user profiles to Admin status
+- Delete user profiles
+
+### Database
+
+### Cloud Service
+
+### Test Framework
+
+Untitled Suite's front-end utilises both `Jest` and `testing-library/react` frameworks for its testing purposes. Both JavaScript logic and React components are tested to ensure Untitled Suite runs efficiently with minimal of errors, bugs and poor user experiences occurring.
+
+### 3rd Party API/Libraries
+
+- The `Axios` library is utilised to fetch data from the API end-points. Performed with an asynchronous mindset alongside error handling and testing, data will be successful retrieved and rendered to the user.
+- The `controller` within the `rails` back-end will be able to access the `Paypal developer API`, this will allow the `user model` to instruct the database to link `user profiles` to their payments and grant them the `premium` tier benefits.
+- The `controller` will also be able to access the `Google Calendar API` and utilise its extensive library to create the framework for the applications calendar feature.
+- The `Rails` back-end will also utilise the `Devise` gem and its various modules to create a flexible authentication solution for Untitled Suite's user base.
 
 ## User Stories
 
