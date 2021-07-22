@@ -387,6 +387,75 @@ In mobile view, the users will be able to scroll left to right to view the Premi
 For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access). 
 
 ![Update to date progression of the Trello Board](./docs/trello-board/trello-04.png)
+### Day 1 - Kickoff Meeting: 
+
+- Project research for inspiration were completed.
+- Trello board was set up. Tickets for Part A was created.
+- GitHub organisation and repository were set up.
+- Local repositories and remote branches were organised and set up.
+- In addition to the standup meetings with Educators, group meeting schedules were set for duration of the project.
+
+![trello-01](./docs/trello-board/trello-01.png)
+
+### Day 2:
+
+- Assigned tickets to each member.
+- Clarified what technologies were used.
+- MVP, optional features and overall functionality were clarified.
+- Examples of what were required to be completed were found and displayed for direction.
+
+![trello-02](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/trello-board/trello-02.png)
+
+![trello-03](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/trello-board/trello-02-1.png)
+
+![trello-03](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/trello-board/trello-03.png)
+
+### Day 3-4:
+
+- Nathan completed on Purpose, Target Audience, User Stories, Features and Functionality documentation.
+- Raymond worked on wireframes built on Figma.
+- Third team member decided to leave. Features and functionality were redefined as a result.
+- Once redefined, tickets were reassigned to remaining members.
+
+![trello-04](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/trello-board/trello-04.png)
+
+### Day 5:
+
+- Nathan worked on Tech Stack section.
+- Nathan reviewed the MVP and Extras ticket.
+- Raymond worked on resolving the 'Wireframes' blocker.
+- Raymond started working on the Dataflow Diagrams.
+
+![trello-05](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/trello-board/trello-05.png)
+
+### Day 6:
+
+- Nathan completed Tech stack section and moved to 'Needs Review'.
+- Nathan worked on the Application Architecture Diagram using draw.io.
+- Raymond continues working on the Dataflow Diagram.
+- Raymond started reviewing the Tech Stack section.
+
+![Update to date progression of the Trello Board](./docs/trello-board/trello-06.png)
+
+### Day 7:
+
+- Meeting with Educators was setup and conducted in the morning to discuss the AAD and DFD.
+- Nathan completed AAD.
+- Raymond completed DFD.
+
+![trello-07](./docs/trello-board/trello-07.png)
+
+### Day 8:
+
+- Both reviewed remaining components (tech stack, AAD and DFD).
+- Nathan conduct full documentation review.
+- Raymond works on the presentation.
+
+![trello-08](./docs/trello-board/trello-08.png)
+
+### Day 9 - Part Submission:
+
+
 
 ## Additional Features for Roadmap - Whats next?
 
