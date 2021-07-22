@@ -181,7 +181,68 @@ Two major components to integrate Tasker and Calendar are joining tables as show
 
 ![dfd-jointable-taskcalendar](/home/raydoan94/Documents/CoderAcademy/Assignments/Final-T3A2/RayDoan-untitled-suite/docs/dataflow-diagram/dfd-jointable-taskcalendar.png)
 
-## Application Architecture Diagram -> thursday
+## Application Architecture Diagram
+
+![untitled_suite_application_architecture_diagram](./docs/application-architecture-diagram/untitled-suite-AAD.png)
+
+The above Application Architecture Diagram illustrates the various components that comprise Untitled Suite's architectural framework. The diagram denotes how each component is handled on a individual level and how they function within their various interactions with other components.
+
+### Front-end
+
+`React` handles the Front-end for Untitled Suite. When a user accesses the application, they are directed to the Untitled Suite's landing page. React renders everything from the navbar system, landing page to login/sign-up forms to the users browser.
+
+### Back-end
+
+Untitled Suite's is handled by `Ruby on Rails` back-end. Utilising fully functionally `CRUD` implementation for users, allows them to create, read, update and delete the following:
+
+- Account/Profile settings
+- Lists within Tasker
+- All individual tasks within each list
+- Calender Events
+
+The back-end will also allow Admin to perform `CRUD` functionality in relation to the following aspects:
+
+- View user account
+- Upgrade user account to Admin status
+- Delete user account
+
+### Database
+
+Untitled Suite's relational database will utilise PostgreSQL to store and provide access to data points that are related to one another. Using a relational model allows Untitled Suite to form relations between the user model and the various other models within the database. An example one be that of a user and their Tasker Lists, a user can have many Tasker lists, however any given Tasker list can only belong to one user. This in turn suggests a one to many relationship.
+
+### Cloud Service
+
+Untitled Suite will utilise AWS cloud based services to host its database. This will allow Untitled Suite to store data and information such as:
+
+- User account details (username,password,image avatar, profile settings, payment details, payment history, current tier)
+- Current `lists` within `Tasker` under that users account id
+- Current `tasks` within above lists under that users account id
+- Calender `events` belonging to each User
+
+### Test Framework
+
+- Untitled Suite's front-end utilises both `Jest` and `testing-library/react` frameworks for its testing purposes. Both JavaScript logic and React components are tested to ensure Untitled Suite runs efficiently with minimal of errors, bugs and poor user experiences occurring.
+- Untitled Suite's back-end will utilise the `Rspec` gem for testing the various back-end components.
+- `Cypress` is utilised to test various components within Untitled Suite's framework, through end-to-end, integration and unit testing
+
+### 3rd Party API/Libraries
+
+- The `Axios` library is utilised to fetch data from the API end-points. Performed with an asynchronous mindset alongside error handling and testing, data will be successful retrieved and rendered to the user.
+- The React front-end entire styling and design framework for Untitled Suite will be handled by the Material-UI framework.
+- The `controller` within the `rails` back-end will be able to access the `Paypal developer API`, this will allow the `user model` to instruct the database to link `user profiles` to their payments and grant them the `premium` tier benefits.
+- The `controller` will also be able to access the `Google Calendar API` and utilise its extensive library to create the framework for the applications calendar feature
+- The `Rails` back-end will also utilise the `Devise` gem and its various modules to create a flexible authentication solution for Untitled Suite's user base. Additionally alongside the user model and restrictions within CRUD functionality, `Devise` will handle and set a range of accessibility on pages that contained particular user information
+
+### Example
+
+When a user logs into the Untitled Suite application they wish to create a new list within Tasker. React will render the new list page within the `Tasker` feature. React will then utilise `Axios` to fetch the `user-lists` endpoint from the API. Through `Devise` and back-end `controller`, the fetch will request will be quired within the database, to verify several key factors:
+
+- Does the current user id exist?
+- Does the current user id holds the `trial` or `premium` tier ?
+- If the current user is on the `trial` tier, have they exceeded their 5 list limit?
+
+If the current user can create a new list within `Tasker`, the `PostgreSQL` will send the `Controller` a response allowing the action to take place. The back-end will then send a response back to the front-end. `React` will then handle that response and render the relevant components and information to the user. Although the above example denotes a simplistic description on how the above action is handled within Untitled Suite's architectural framework. It demonstrates how each component within the framework handles it primary duties and interactions with each other.
+
 
 ## User Stories
 
