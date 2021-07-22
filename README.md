@@ -160,7 +160,19 @@ The Australian public during the Covid-19 pandemic were asked to work, school an
 
 ## Dataflow Diagram
 
-## Application Architecture Diagram -> thursday
+## Application Architecture Diagram
+
+![untitled_suite_application_architecture_diagram](./docs/application-achitecture-diagram/untitled-suite-AAD.png)
+
+- What is my app made of?
+
+- What separate parts of my app are there?
+
+- How do these separate parts of my app connect to each other?
+
+You can think of it as identifying the features & parts of your application.
+
+The database connects to the models, which connects to the controllers, which connects to the views...etc etc.
 
 ## User Stories
 
@@ -230,17 +242,17 @@ The initial wireframes designed for Untitled Suite aim to maintain a basic struc
 
 ### Colour Scheme
 
-Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application. 
+Untitled Suite encourages creativity and enthusiasm throughout the project management process, despite the blank canvas the name suggests. To resemble this in the application, orange `#ff8e3c` is the primary colour used to convey this to the user and is a perfect colour to draw attention the main features of the application.
 
 ### Home Page
 
-The home page is designed to give a brief introduction to the application and give Call-To-Actions (CTAs) for the user to sign up or login. The minimalism to the home page aims to help the user understand the simplicity of the application. 
+The home page is designed to give a brief introduction to the application and give Call-To-Actions (CTAs) for the user to sign up or login. The minimalism to the home page aims to help the user understand the simplicity of the application.
 
 ![wireframe_home](./docs/wireframes-2/wireframe_home.png)
 
 ### Tasker Dashboard
 
-Once logged in, the user is brought to Tasker as their default page. Here, the user will be able to view all their tasks, with the first being the tasks associated with today. It is a simple UI with the CTA buttons in orange and the Lists listed at the bottom of the page. Pagination was an initial idea discussed to achieve the list of the tasks, however was overruled with a scrolling capability to maintain the single page application (SPA) aspect. 
+Once logged in, the user is brought to Tasker as their default page. Here, the user will be able to view all their tasks, with the first being the tasks associated with today. It is a simple UI with the CTA buttons in orange and the Lists listed at the bottom of the page. Pagination was an initial idea discussed to achieve the list of the tasks, however was overruled with a scrolling capability to maintain the single page application (SPA) aspect.
 
 The layout of the application with the agenda to the side of the tasks was requested as it helped with the usability of the web app and helps manage the reminders of the tasks along with the meetings throughout the day. This component will be hidden on the smaller screen sizes to give more space to the core feature of the page.
 
@@ -250,7 +262,7 @@ Users can create new tasks and lists on this page by clicking the `Add New Task 
 
 ### Tasker - Edit / Delete Task Page
 
-In the event of the user requiring to modify the task to be more specific, users can select the dot on the right side of the task and modify details of the task. Here, users are able to change the task details such as title, description, reminder date and many more. 
+In the event of the user requiring to modify the task to be more specific, users can select the dot on the right side of the task and modify details of the task. Here, users are able to change the task details such as title, description, reminder date and many more.
 
 A calendar prompt will be shown once the `Reminder Date` is selected, and setting the date will set the reminder to notify the user of the task on the day. `Select List` will allow the user to associate the task with the list they have created prior to the task, which can be found at the bottom of the Tasker dashboard. `Select Priority` will allow the user to set the level of priority for the task.
 
@@ -258,11 +270,11 @@ A calendar prompt will be shown once the `Reminder Date` is selected, and settin
 
 ### Calendar Dashboard
 
-Below is the default view of the Calendar dashboard, with Tasker on the left of the calendar and the weekly view as default for the user. Similar to the agenda feature in the Tasker dashboard, the Calendar dashboard hides the Tasker list in smaller screen sizes and gives more space and functionality to the Calendar. In these smaller screens, users will be able to create events with the `+` button on the bottom right of the screen. 
+Below is the default view of the Calendar dashboard, with Tasker on the left of the calendar and the weekly view as default for the user. Similar to the agenda feature in the Tasker dashboard, the Calendar dashboard hides the Tasker list in smaller screen sizes and gives more space and functionality to the Calendar. In these smaller screens, users will be able to create events with the `+` button on the bottom right of the screen.
 
 ![wireframe_calendar_read](./docs/wireframes-2/wireframe_calendar_read.png)
 
-### Calendar - Add New Event / Edit Event Page 
+### Calendar - Add New Event / Edit Event Page
 
 Here, a modal component or pop up will show onto the screen when the user decides to add a new event or modify an existing event. Start and End dates are provided for the user to create the length of their meetings as well as description box for more in-depth details to the meeting.
 
@@ -282,7 +294,7 @@ Profile page will allow users to update their details on the application, such a
 
 ### Login Page
 
-Here is a simple login page for the users to login into the application. 
+Here is a simple login page for the users to login into the application.
 
 ![wireframe_login](./docs/wireframes-2/wireframe_login.png)
 
@@ -292,7 +304,7 @@ Similar to the login page, here is a simple sign up page where the user will be 
 
 ![wireframe_signup](./docs/wireframes-2/wireframe_signup.png)
 
-### Pricing Page 
+### Pricing Page
 
 Finally, here is the pricing page will be linked to a Paypal page where the user can pay for a subscription fee to upgrade their account and have access to the premium tier of the website.
 
@@ -302,7 +314,7 @@ In mobile view, the users will be able to scroll left to right to view the Premi
 
 ## Trello Board
 
-For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access). 
+For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access).
 
 ![Update to date progression of the Trello Board](./docs/trello-board/trello-04.png)
 
