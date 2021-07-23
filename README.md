@@ -510,6 +510,12 @@ For snapshots of the progress of our Trello board, check out the `docs/trello-bo
 
 ### Day 9 - Part Submission
 
+- Raymond finished the presentation.
+- Both presented Untitled Suite to the class. 
+- Took the final screenshot of Trello Board, indicating the completion of the Part A of the assignment.
+
+![trello-09](./docs/trello-board/trello-09.png)
+
 ## Additional Features for Roadmap - Whats next?
 
 Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
