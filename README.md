@@ -220,7 +220,7 @@ Similar to `Lists` and `Tasks`, all calendar events set by the `Users` are shown
 
 ### Joining Tables Dataflow
 
-Two major components to integrate `Tasker` and `Calendar ` are joining tables as shown below. These will be set up within the `Rails API` such that:
+Two major components to integrate `Tasker` and `Calendar` are joining tables as shown below. These will be set up within the `Rails API` such that:
 
 - Lists will be a one-to-many relationship with Tasks, and;
 - Calendars also have a one-to-many relationship with Tasks.
@@ -510,6 +510,12 @@ For snapshots of the progress of our Trello board, check out the `docs/trello-bo
 
 ### Day 9 - Part Submission
 
+- Raymond finished the presentation.
+- Both Nathan and Raymond presented Untitled Suite to the class.
+- Took the final screenshot of Trello Board, indicating the completion of Part A of the assignment.
+
+![trello-09](./docs/trello-board/trello-09.png)
+
 ## Additional Features for Roadmap - Whats next?
 
 Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
@@ -546,4 +552,4 @@ Untitled Suite will add a new addition to its suite of tools in the form of a fu
 
 ## References
 
-- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, https://project-management.com/task-management-software
+- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, [https://project-management.com/task-management-software](https://project-management.com/task-management-software)
